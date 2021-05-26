@@ -1,0 +1,553 @@
+body {
+  color: white;/* text color */
+  background-color: #808080;
+}
+
+/*..Main {
+margin-right: auto;
+margin-left: auto;
+background-color: #DDDDDD;
+font-family:'Open Sans', Arial,Helvetica,sans-serif;
+}
+.cards-div {
+margin-right: auto;
+margin-left: auto;
+display: block;
+}
+
+cardwrapper{
+    width:700px;
+    margin: 0 auto;
+    overflow:auto;
+}*/
+
+/*TOP, MIDDLE AND BOTTOM SCREEN DIVISIONS TO PLACE INSTRUCTIONS, STIMULI AND PROMPTS, RESPECTIVELY*/
+div.divtop {
+  width:700px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  /*border: 3px solid #73AD21;*//*border useful if checking div dimensions*/
+}
+
+div.divverytop {
+  width:700px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  /*border: 3px solid #73AD21;*//*border useful if checking div dimensions*/
+}
+
+div.divtopmid {
+  width:750px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 80%;
+  /*border: 3px solid #73AD21;*//*border useful if checking div dimensions*/
+}
+
+div.divmiddle {
+  width:700px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.divbottom {
+  width:700px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.cardleft {
+    width: 300px;
+    float:left;
+}
+
+.cardright {
+    width: 300px;
+    float:right;
+}
+
+div.divobservee {
+  width:300px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+}
+
+/*CUSTOM BUTTONS FOR CONFIDENCE RATING SCALES: NON-GRADIENT HALVES WITH BLACK BUTTON FOR 50 IN THE MIDDLE*/
+
+/*Regular class */
+.confrat-btn {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: white; /* [#4CAF50,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#4CAF50]*/
+  background-color: black;
+  border-color: white;
+}
+
+.confrat-btn:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Blue class */
+.confrat-btn-blue {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: white;
+  background-color: #080FAE;
+  border-color: white;
+}
+
+.confrat-btn-blue:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Pink class */
+.confrat-btn-pink {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: white;
+  background-color: #B50096;
+  border-color: white;
+}
+
+.confrat-btn-pink:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*CUSTOM BUTTONS FOR CONFIDENCE RATING SCALES: GRADIENT BETWEEN BOTH COLORS WITH WHITE INBETWEEN */
+
+/*Blue class for response = 100 */
+.confrat-btn-blue-100 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #080FAE;
+  border-color: black;
+}
+
+.confrat-btn-blue-100:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Blue class for response = 90 */
+.confrat-btn-blue-90 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #0b14ed;
+  border-color: black;
+}
+
+.confrat-btn-blue-90:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Blue class for response = 80 */
+.confrat-btn-blue-80 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #434af6;
+  border-color: black;
+}
+
+.confrat-btn-blue-80:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Blue class for response = 70 */
+.confrat-btn-blue-70 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #8287f9;
+  border-color: black;
+}
+
+.confrat-btn-blue-70:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Blue class for response = 60 */
+.confrat-btn-blue-60 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #c0c3fc;
+  border-color: black;
+}
+
+.confrat-btn-blue-60:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Middle class for response = 50 */
+.confrat-btn-grad-50 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.confrat-btn-grad-50:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+
+
+/*Pink class for response = 100 */
+.confrat-btn-pink-100 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #B50096;
+  border-color: black;
+}
+
+.confrat-btn-pink-100:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Pink class for response = 90 */
+.confrat-btn-pink-90 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #f700cd;
+  border-color: black;
+}
+
+.confrat-btn-pink-90:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Pink class for response = 80 */
+.confrat-btn-pink-80 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #ff3add;
+  border-color: black;
+}
+
+.confrat-btn-pink-80:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Pink class for response = 70 */
+.confrat-btn-pink-70 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #ff7be8;
+  border-color: black;
+}
+
+.confrat-btn-pink-70:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+/*Pink class for response = 60 */
+.confrat-btn-pink-60 {
+  display: inline-block;
+  width: 60px;/* important to make that all buttons have same width, and not depending on text length */
+  padding: 6px 6px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: black;
+  background-color: #ffbdf4;
+  border-color: black;
+}
+
+.confrat-btn-pink-60:hover {/* make button change color when hovering on it */
+  background-color: #555555;
+  color: white;
+}
+
+
+
+
+
+
+/* STYLE FOR CONTINUOUS CONFIDENCE SCALE */
+/* Div for continuous confidence scale */
+div.scale_div {
+	
+  width: 500px;
+  height: 40px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #080FAE 0%, #ffffff 50%, #B50096 100%);
+  style = "text-align:center;"
+  border-width: 15px;
+  border-radius: 5px;
+  border: 2px solid #303030;
+  cursor: pointer;
+}
+
+div.scale0_div {
+	
+  width: 500px;
+  height: 40px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #080FAE 0%, #ffffff 50%, #B50096 100%);
+  style = "text-align:center;"
+  border-width: 15px;
+  border-radius: 5px;
+  border: 2px solid #303030;
+  cursor: pointer;
+}
+
+div.scale1_div {
+	
+  width: 500px;
+  height: 40px;
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #B50096 0%, #ffffff 50%, #080FAE 100%);
+  style = "text-align:center;"
+  border-width: 15px;
+  border-radius: 5px;
+  border: 2px solid #303030;
+  cursor: pointer;
+}
+
+
+/* Div to present value corresponding to mouse position above continuous confidence scale */
+div.integer_div {
+  width:500px; /* width slightly longer than scale div to give participants some extra room to select 100*/
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  text-align: center;
+  /*border: 3px solid #73AD21;*//*border useful if checking div dimensions*/
+}
+
+.integer_color{
+color: #8b008b;
+}
